@@ -58,6 +58,10 @@ namespace TboxWebdav.Server.Modules.Tbox
             {
                 Getter = (context, collection) => collection._folderInfo.Name
             },
+            new DavGetContentLength<TboxStoreCollection>
+            {
+                Getter = (context, collection) => 0
+            },
             new DavGetLastModified<TboxStoreCollection>
             {
                 Getter = (context, collection) => collection._folderInfo.ModificationTime,
